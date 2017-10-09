@@ -83,7 +83,6 @@ var x = num;
 
 ## 비교연산자
 - 반환값의 타입이 Boolean
-- [비교연산자 표](http://poiemaweb.com/js-operator#3-비교-연산자-comparison-operators)
 
 1. == 과 === 의 차이
   1. == (동등비교, loose equality)
@@ -93,49 +92,20 @@ var x = num;
   2. === (일치비교, strict equality)
     -  자료의 타입까지 일치해야 true
 
-    ```javascript
-    var x = 5;
-    x == 5 ;  //true
-    x == '5'; //true
-
-    x === 5  //true
-    x === '5'; //false
-    ```
 2. ? (삼항연산자, ternary operator)
   - 조건문처럼, 조건이 true일때 반환할 값과 false일때 반환할 값 설정 가능
-  ```javascript
-  // 조건 ? 조건이 ture일때 반환할 값 : 조건이 false일때 반환할 값
-  var condition = true;
-  var result = condition ? 'true' : 'false';
-  console.log(result); // 'true'
-  ```
 
 ## 논리연산자
   1. || (or, 논리 합 연산자)
-  ```javascript
- // 둘 중 하나의 값이 true라면 true
- var o1 =  true || true;     // t || t returns true
-  var o2 = false || true;     // f || t returns true
-  var o3 =  true || false;    // t || f returns true
-  var o4 = false || (3 == 4); // f || f returns false
-  ```
+    - 둘 중 하나의 값이 true라면 true
+
 
   2. && (and, 논리 곱 연산자)
-  ```javascript
-  // 둘 다 true여야만 true
-  var a1 =  true && true;     // t && t returns true
-  var a2 =  true && false;    // t && f returns false
-  var a3 = false && true;     // f && t returns false
-  var a4 = false && (3 == 4); // f && f returns false
-  ```
+    - 둘 다 true여야만 true
 
   3. ! (not, 논리 부정 연산자)
-  ```javascript
-  var n1 = !true;  // false
-  var n2 = !false; // true
-  var n3 = !'Cat'; // false
- // 빈문자열이 아닌 이상 true로 간주하여, 'Cat'은 true로 취급
-  ```
+    - 빈문자열이 아닌 이상 true로 간주
+
 
 ## 단축 평가(Short-Circuit Evaluation)
   - 논리연산자가 boolean값과 함꼐 사용되지 않을 경우
@@ -149,17 +119,7 @@ var x = num;
     ```
 ## 타입 연산자(Type-Operators)
   - `typeof [sth]` 피연산자의 데이터 타입을 문자열로 반환
-      ```javascript
-      console.log(typeof 'John'); // string
-      console.log(typeof myCar); // undefined (설계적 결함)
-      console.log(typeof null); // object (설계적 결함)
-      ```
   - `instanceof [sth]` 객체가 동일 객체형의 인스턴스이면 `true` 반환
-      ```javascript
-      function Person() {}
-      var me = new Person();
-      console.log(me instanceof Person); // true
-      ```
 
 
 ## !!
@@ -257,11 +217,6 @@ console.log(!!obj); // true
     if (i % 2 == 0) continue;
     console.log(i);
   }
-  // 1
-  // 3
-  // 5
-  // 7
-  // 9
   ```
 
 ## 평가
@@ -269,8 +224,6 @@ console.log(!!obj); // true
   - JavaScript에서는 조건식을 평가할 때 여러 환경의 문맥(context)을 고려하여 최대한 참/거짓의 `boolean`값으로 해석하려 노력한다. 이때 암묵적인 강제 형 변화가 발생
   - 이를 통해 조건식을 평가
   - 이때 의도하지 않은 값이 만들어질 수 있어 주의가 필요함
-  2. Type Conversion table
-  - [표 보기](http://poiemaweb.com/js-control-flow#42-type-conversion-table)
   3. Data type conversion
   - string -> number
   ```javascript
