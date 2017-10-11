@@ -1,13 +1,13 @@
 # Variable & Data Type
 * 변수 (Variable)
     * 개념
-		* 값(value)은 메모리에 할당되고 메모리상의 주로를 가지게 된다.
-		* 변수란 메모리상의 주소에 접근하기 위해 쉬운용어로 지정한 식별자이다.다
+		* 값(value)은 메모리에 할당되고 메모리상의 주소를 가지게 된다.
+		* 변수란 메모리상의 주소에 접근하기 위해 쉬운용어로 지정한 식별자이다.
     * 자바스크립트 변수의 특징
         * 동적타이핑언어(Dynamic Typing) - 자동으로 자료형이 결정 됨 (Type Inference)
         * 7가지 자료형(Data Type)
             * 기본자료형(Primitive data type) : Boolean, null, underfined, Number, String, Symbol
-            * 객체형(Object type) : Object 
+            * 객체형(Object type) : Object
         * 변수의 중복선언이 가능함 (문법적으로 허용되지만 사용하지 않는 것이 좋다)
         * 변수호이스팅(Variable Hoisting) : 코드 실행전에 변수의 선언문을(선언단계 및 초기화 단계) 맨위로 올리는 현상
 	* 문제점
@@ -183,4 +183,4 @@
 # Jacascript this
 * this는 기본적으로 window객체를 가리키다.
 * this가 매서드 앞에 있을때는 호출한 자의 주인을 가리킨다.
-* this는 생성자 함수에서는 먼저 빈객체를 생성하여 이를 가리킨 후 프로퍼티 값으로 동적추가가 되어 반환된다.
+* this는 생성자 함수에서는 먼저 빈객체를 생성하여 이를 가리킨 후 프로퍼티 값으로 반환한다.
