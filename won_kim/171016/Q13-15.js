@@ -1,38 +1,21 @@
-// 13. 최대공약수와 최소공배수
+// 13. 소수찾기
 
-function gcdlcm(a, b) {
-  let max = Math.max(a, b);
-  let min = Math.min(a, b);
-  while (max % min !== 0) {
-    const remain = max % min;
-    max = Math.max(remain, min);
-    min = Math.min(remain, min);
-  }
-  const gcd = min;
-  const lcm = (a * b) / gcd;
-  return [gcd, lcm];
-}
-console.log(gcdlcm(3, 12));
-
-// 리팩토링: 여러 숫자의 최소공배수
-
-function nlcm(...num) {
-  const numbers = Array.prototype.slice.call(num);
-  const result = numbers.reduce(function (a, b) {
-    let max = Math.max(a, b);
-    let min = Math.min(a, b);
-    while (max % min !== 0) {
-      const remain = max % min;
-      max = Math.max(remain, min);
-      min = Math.min(remain, min);
+function countPrime(n) {
+  const primeArr = [];
+  for (let i = 2; i < n; i++) {
+    const len = primeArr.length;
+    const notSquare = !Number.isInteger(Math.sqrt(i));
+    if ((i === 2) || (i === 3) || (i === 5)) {
+      primeArr[len] = i;
     }
-    const gcd = min;
-    const lcm = (a * b) / gcd;
-    return lcm;
-  });
-  return result;
+    if ((i % 2) && (i % 3) && (i % 5) && notSquare) {
+      primeArr[len] = i;
+    }
+  }
+  return primeArr.length;
 }
-console.log(nlcm(3, 6, 12, 20, 100));
+
+console.log(countPrime(10));
 
 
 
